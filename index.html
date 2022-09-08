@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Library</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="top">
+        <h1>MY LIBRARY</h1>
+        <button id="add-book">+</button>
+    </div>
+    <div class="book-container">
+        <div class="book-card card">
+            <div class="book-text">
+              <label for="book-title">Title:
+                <h3 id="book-title">TEST TITLE THAT IS WAYYYY TOO LONG </h3>
+              </label>
+              <label for="book-author">Author:
+                <h4 id="book-author">TEST AUTHOR WITH A REALLY </h3>
+              </label>
+              <label for="book-page-count">Page Count:
+                <h4 id="book-page-count">100</h3>
+              </label>
+            </div>
+            <div class="book-buttons">
+              <button>EDIT</button>
+              <button>DEL</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>+</div>
+    </footer>
+    <form class="form-container forms">
+      <h3>NEW BOOK</h3>
+      <button id="submit-cancel" type="button">X</button>
+      <label for="submitted-title">BOOK TITLE *</label>
+      <input class="text-input" type="text" id="submitted-title" required>
+      <label for="submitted-author">AUTHOR *</label>
+      <input class="text-input" type="text" id="submitted-author" required>
+      <label for="submitted-pages"># OF PAGES *</label>
+      <input class="text-input" type="text" id="submitted-pages" required>
+      <label for="submitted-read-status">READ IT?</label>
+      <input class="checkbox-input" type="checkbox" id="submitted-read-status" required>
+      <button id="submit-book" type="button">ADD BOOK TO LIBRARY</button>
+    </form>
+
+    <template id="book-card-template">
+      <div class="book-card card">
+        <div class="book-text">
+          <label for="book-title">Title:
+            <h3 id="book-title">TEST TITLE THAT IS WAYYYY TOO LONG </h3>
+          </label>
+          <label for="book-author">Author:
+            <h4 id="book-author">TEST AUTHOR WITH A REALLY </h3>
+          </label>
+          <label for="book-page-count">Page Count:
+            <h4 id="book-page-count">100</h3>
+          </label>
+        </div>
+        <div class="book-buttons">
+          <button>EDIT</button>
+          <button>DEL</button>
+        </div>
+    </div>
+
+    </template>
+
+  </body>
+  <script src="script.js"></script>
+</html>

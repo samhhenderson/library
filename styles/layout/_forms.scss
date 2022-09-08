@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to forms.
+// -----------------------------------------------------------------------------
+
+.forms {
+    @include blocks;
+    background-color:rgba($dark-blue-gray, .15);
+    border-radius: 10px;
+    gap: 20px 60px;
+    font-size: 15px;
+    align-self: center;
+    padding: 20px;
+}
+
+.text-input{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 28px;
+    border-radius: 5px;
+    border: 2px white;
+}
+

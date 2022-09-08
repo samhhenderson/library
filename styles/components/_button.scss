@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+button {
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    color: white;
+    background-color: $dark-blue-gray;
+
+}
+
+button:active {
+    background-color: rgba($dark-blue-gray, 0.9);
+}
+
+button:disabled {
+    background-color: rgba($dark-blue-gray, 0.3);
+}
