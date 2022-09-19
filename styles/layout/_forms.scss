@@ -21,3 +21,14 @@
     border: 2px white;
 }
 
+.form-title{
+    white-space: nowrap;
+}
+
+.form-container {
+    gap: 10px;
+    label, input, h1, h2, h3{
+        display: flex;
+        align-items: center;
+    }
+}

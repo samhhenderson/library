@@ -10,12 +10,14 @@ body {
 }
 
 .form-container {
-    display: grid;
-    grid: 1.5fr 1fr 1fr 1fr 1fr 1.5fr / 1fr auto;
-    gap: 10px;
+    display: none;
+    grid: 1.5fr 1fr 1fr 1fr 1fr 1.5fr / 105px auto;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: $default-background;
 }
 
 #submit-cancel {
@@ -35,7 +37,6 @@ body {
 }
 
 [type~="checkbox"] {
-    padding-right: 30px;
     height: 30px;
     width: 30px;
 }
@@ -48,18 +49,15 @@ body {
     background-color: $dark-blue-gray;
     padding: 50px;
     h1 {color: white;}
-    button {
-        background-color: white;
-        color: $dark-blue-gray;
-        font-size: 30px;
-    }
 }
 
 #add-book{
     width: 40px;
     height: 40px;
+    font-size: 40px;
     border-radius: 20px;
     margin-left: auto;
+    transform: rotate(0deg);
 }
 
 .book-container {
@@ -67,26 +65,22 @@ body {
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
+    justify-content: center;
 }
 
 .book-card {
     display: flex;
+    position: relative;
     flex-direction: column;
+    padding: 20px;
     width: 250px;
     height: 300px;
-    gap: 5px;
-
-}
-
-.book-text {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-left: 20px;
+    gap: 10px;
     label {
-        font-size: 14px;
+        font-size: 16px;
         h3, h4 {
             font-size: 24px;
+            color: darkblue;
             margin-top: -5px;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -105,8 +99,28 @@ body {
     }
 }
 
-.book-buttons {
+.page-count {margin-top: auto}
+
+.horiz {
     display: flex;
-    justify-content: space-around;
-    margin: auto 0 10px 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-delete {
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#page-mask {
+    display: none;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
